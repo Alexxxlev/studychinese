@@ -1,0 +1,1092 @@
+.screen-content,
+.screen-content-children,
+.screen-content_videochat {
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint($tablet-bp) {   
+        margin: 20px 80px;
+        height: auto;
+        min-height: 770px;
+    }
+
+    @include breakpoint($mobile-bp) {   
+        margin: 20px 30px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 20px auto;
+        min-height: 720px;
+    } 
+}
+
+.screen-content_videochat {
+    @include breakpoint($tablet-bp) {   
+        margin: 0;
+        height: 530px;
+        min-height: auto;
+    }
+
+    @include breakpoint($mobile-bp) {   
+        height: 482px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 430px;
+    }
+
+    &.full-screen {
+        @include breakpoint($tablet-bp) {   
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 5001;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 30%;
+                pointer-events: none;
+                background-image: linear-gradient(to bottom, rgba(56, 56, 64, 1) 0%, rgba(56, 56, 64, 0.5) 50%, rgba(56, 56, 64, 0) 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 5001;
+            }
+
+            .my-video-screen_videochat {
+                bottom: 70px;
+            }
+
+            .screen-tab__messages-block,
+            .screen-tab__files-block {
+                min-height: auto;
+                max-height: none;
+                height: fit-content;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 5002;
+            }
+
+            .screen-tab__messages-block__list,
+            .screen-tab__files-block__list {
+                max-height: 300px;
+            }
+        }
+
+        @include breakpoint($mobile-bp) {
+            .screen-tab__messages-block__list,
+            .screen-tab__files-block__list {
+                max-height: 208px;
+            }
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            .videochat-no-connection__block {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.screen-content-children {
+    background-color: #cf9fc9;
+    background-image: url(../../images/study-room/children-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+
+    @include breakpoint($tablet-bp) {
+        min-height: 500px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        min-height: 480px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        min-height: 460px;
+        background-image: url(../../images/study-room/children-bg-mobile.png);
+        background-size: 125%;
+        -webkit-background-size: 125%;
+    } 
+}
+
+.screen-content_board {
+    @include breakpoint($tablet-bp) { 
+        margin: 20px 80px;  
+        min-height: 650px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 20px 30px;
+        min-height: 585px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 20px auto 0;   
+        min-height: 545px;
+    }
+}
+
+.tool-pencil-pen__block {
+    padding: 20px 22px 30px;
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 250px;
+    height: auto;
+    box-shadow: 6px 6px 9px 0 rgba(4, 14, 24, .05);
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    background-color: $white;
+    box-sizing: border-box;
+    position: absolute;
+    left: -30px;
+    top: 16%;
+    z-index: 10;
+    transform: translateY(15%);
+
+    @include breakpoint($notebook-bp) {
+        padding: 20px;
+        width: 242px;
+        top: 20%;
+        left: -34px;
+    }
+
+    @include breakpoint($tablet-bp) {
+        padding: 15px;
+        width: 232px;
+        top: 25%; 
+        left: -170px;
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    &.pc {
+        @include breakpoint($mobile-sm-bp) {
+            &.active {
+                display: none;
+            }
+        }
+    }
+
+    &.mobile {
+        &.active {
+            display: none;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin: 0 auto;
+            position: static;
+            background-color: inherit;
+            border: none;
+            box-shadow: none;
+            transform: none;
+
+            &.active {
+                display: flex;
+            }
+        }
+    }
+}
+
+.tool-pencil-pen__block-header {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.tool-pencil-pen__block-header__title {
+    margin-left: 10px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 15px;
+    color: #545661;
+    letter-spacing: -.2px; 
+}
+
+.tool-pencil-pen__block-main {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.tool-pencil-pen__block-main-item {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tool-pencil-pen__block-main__title {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 12px;
+    color: #9ca8ae;
+    letter-spacing: -.2px; 
+}
+
+.tool-pencil-pen__block-footer {
+    width: 100%;
+}
+
+.tool-pencil-pen__block-footer__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tool-pencil-pen__block-footer__item {
+    margin: 6px 7px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 36px;
+        height: 36px;
+        opacity: 0;
+        border: 1px solid #23232b;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s all linear;
+    }
+
+    &.colour-1 {
+        border: 1px solid #e8ebee;
+        background-color: $white;
+    }
+    &.colour-2 {
+        background-color: #ffec1c;
+    }
+    &.colour-3 {
+        background-color: #f1a13b;
+    }
+    &.colour-4 {
+        background-color: #d74cae;
+    }
+    &.colour-5 {
+        background-color: #bfcacf;
+    }
+    &.colour-6 {
+        background-color: #20c2fa;
+    }
+    &.colour-7 {
+        background-color: #5257df;
+    }
+    &.colour-8 {
+        background-color: #52b046;
+    }
+    &.colour-9 {
+        background-color: #181818;
+    }
+    &.colour-10 {
+        background-color: #a173df;
+    }
+    &.colour-11 {
+        background-color: #f5091a;
+    }
+    &.colour-12 {
+        background-color: #349138;
+    }
+
+    &.active,
+    &:hover,
+    &:focus,
+    &:focus-within {
+        &::before {
+            content: '';
+            width: 44px;
+            height: 44px;
+            opacity: 1;
+        }
+    }
+}
+
+.screen-content__repeat-hieroglyph {
+    position: absolute;
+    top: 22%;
+    left: 35px;
+
+    @include breakpoint($tablet-bp) {   
+        top: 10px;
+        left: 33%;
+        transform: translateX(-33%);
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        left: 10%;
+        transform: translateX(-10%);
+    } 
+}
+
+.repeat-hieroglyph__item {
+    width: fit-content;
+}
+
+.repeat-hieroglyph__item-title {
+    width: 100px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: $light-black;
+    line-height: 1;
+    letter-spacing: -.1px; 
+}
+
+.repeat-hieroglyph__item-text {
+    margin-left: 5px;
+    font-family: "SimSun", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: #954090;
+    letter-spacing: -.2px; 
+}
+
+.screen-content__draw-hieroglyph,
+.screen-content__draw-hieroglyph_board {
+    min-width: 325px;
+    min-height: 325px;
+    position: absolute;
+    top: 35px;
+    left: 140px;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {   
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        min-width: 280px;
+        min-height: 280px;
+    }
+}
+
+.screen-content__draw-hieroglyph {
+    display: none;
+
+    &.active {
+        display: inline;
+    }
+}
+
+.screen-content__draw-hieroglyph_board,
+.screen-content__draw-hieroglyph_children-board {
+    top: auto;
+    bottom: 80px;
+
+    @include breakpoint($tablet-bp) {   
+        top: 160px;
+        left: 50%;
+        bottom: auto;
+        transform: translateX(-50%);
+    }
+}
+
+.screen-content__draw-hieroglyph_children-board {
+    @include breakpoint($tablet-bp) {   
+        top: 140px;
+    } 
+}
+
+.screen-content__draw-hieroglyph__wrapper {
+    resize: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: auto;
+	min-width: 325px;
+    min-height: 325px;
+	
+	background: #f8f9f9 url(../../images/study-room/draw-hieroglyph-bg.svg) center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+
+    @include breakpoint($mobile-sm-bp) {
+        min-width: 280px;
+        min-height: 280px;
+    }
+
+    img {
+        width: 140px;
+        height: 125px;
+    }
+    
+    &::-webkit-resizer {
+        opacity: 0;
+    } 
+}
+
+.draw-hieroglyph-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.anchor-point {
+    width: 14px;
+    height: 14px;
+    box-shadow: 4px 4px 8px 0 rgba(5, 22, 26, .2);
+    border: 1px solid #9cb0b9;
+    border-radius: 50%;
+    background-color: $white;
+    font-size: 0;
+    cursor: pointer;
+    position: absolute;
+
+    &.anchor-point_sm {
+        width: 11px;
+        height: 11px;
+    }
+
+    &.number-1 {
+        top: -5px;
+        left: -5px;
+    }
+    &.number-2 {
+        top: -5px;
+        right: -5px;
+    }
+    &.number-3 {
+        bottom: -5px;
+        left: -5px;
+    }
+    &.number-4 {
+        bottom: -5px;
+        right: -5px;
+    }
+}
+
+.screen-content__lesson {
+    padding: 17px 13px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    background-color: $white;
+    box-shadow: 5px 5px 46px 0px rgba(5, 22, 26, .21);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
+
+    &.pc {
+        @include breakpoint($tablet-bp) {
+            display: none;
+        }   
+    }
+
+    &.mobile {
+        display: none;
+
+        @include breakpoint($tablet-bp) {
+            margin: 25px auto;
+            display: flex;
+            max-width: 325px;
+            width: 100%;
+            box-shadow: 5px 5px 20px 0px rgba(5, 22, 26, .21);
+            position: static;
+        }  
+
+        @include breakpoint($mobile-sm-bp) {
+            box-shadow: 2px 5px 13px 0px rgba(5, 22, 26, .21);
+        }  
+    }
+}
+
+.communication-microphone,
+.communication-video {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1f1f28;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 25px;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        width: 36px;
+        height: 36px;
+        bottom: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 32px;
+        height: 32px;
+        bottom: 15px;
+    }
+    
+    &::after {
+        content: '';
+        width: 23px;
+        height: 2px;
+        background-color: #c62859;
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.communication-microphone {
+    left: 35px;
+
+    @include breakpoint($mobile-bp) {
+        left: 25px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        left: 20px;
+    }
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        mask: url(../../images/study-room/microphone.svg) center no-repeat;
+        -webkit-mask: url(../../images/study-room/microphone.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        position: absolute;
+
+        @include breakpoint($mobile-bp) {
+            width: 18px;
+            height: 18px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &.full-screen {
+        @include breakpoint($tablet-bp) {
+            left: 20px;
+            bottom: 70px;
+        }
+    }
+}
+
+.communication-video {
+    left: 96px;
+
+    @include breakpoint($mobile-bp) {
+        left: 80px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        left: 70px;
+    }
+
+    &::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-color: $white;
+        mask: url(../../images/study-room/video-chat.svg) center no-repeat;
+        -webkit-mask: url(../../images/study-room/video-chat.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        position: absolute;
+
+        @include breakpoint($mobile-bp) {
+            width: 16px;
+            height: 16px;
+        }
+    
+        @include breakpoint($mobile-sm-bp) {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &.full-screen {
+        @include breakpoint($tablet-bp) {
+            left: 80px;
+            bottom: 70px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            left: 70px;
+        }
+    
+        @include breakpoint($mobile-sm-bp) {
+            left: 65px;
+        }
+    }
+}
+
+.my-video-screen,
+.my-video-screen_videochat {
+    width: 247px;
+    height: 135px;
+    background-color: #c7c7c7;
+    box-shadow: 5px 5px 46px 0px rgba(5, 22, 26, .21);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
+
+    @include breakpoint($tablet-bp) {   
+        box-shadow: 5px 5px 20px 0px rgba(5, 22, 26, .21);
+    }
+
+    @include breakpoint($mobile-bp) {
+        width: 106px;
+        height: 127px;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0px 5px 20px 0px rgba(5, 22, 26, .21);
+    }
+}
+
+.my-video-screen_videochat {
+    @include breakpoint($mobile-bp) {
+        width: 120px;
+        height: 80px;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 100px;
+        height: 60px;
+    }
+}
+
+.my-video-screen__content,
+.my-video-screen__content_videochat {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint($mobile-bp) {
+            width: auto;
+            height: auto;
+            transform: translateX(-33%);
+        }
+    }
+}
+
+.my-video-screen__content_videochat {
+    img {
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+            height: 100%;
+            transform: none;
+        }
+    } 
+}
+
+.screen-content-video,
+.screen-content-video_board {
+    width: 205px;
+    height: 135px;
+    position: absolute;
+    left: 200px;
+    bottom: 50px;
+
+    @include breakpoint($tablet-bp) {   
+        bottom: 10px;
+        left: 45%;
+        transform: translateX(-45%);
+    }
+
+    &.d-none {
+        display: none;
+    }
+}
+
+.screen-content-video_board {
+    width: 465px;
+    height: 305px;
+    position: relative;
+    left: auto;
+    bottom: auto;
+
+    @include breakpoint($tablet-bp) {   
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint($mobile-bp) {
+        width: 400px;
+        height: 240px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 305px;
+        height: 200px;
+    }
+}
+
+.yt-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.screen-content-video__btn-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #b7c1ca;
+        mask: url(../../images/close-disabled.svg) center no-repeat;
+        -webkit-mask: url(../../images/close-disabled.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+   
+}
+
+.screen-content-video__btn-close_board {
+    width: 35px;
+    height: 35px;
+    top: -13px;
+    right: -13px;
+
+    @include breakpoint($mobile-bp) {
+        width: 28px;
+        height: 28px;
+        top: -11px;
+        right: -11px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 23px;
+        height: 23px;
+        top: -9px;
+        right: -9px;
+    }
+
+    &::before {
+        width: 17px;
+        height: 17px;
+
+        @include breakpoint($mobile-bp) {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.screen-content-document {
+    min-width: 180px;
+    min-height: 70px;
+    background-color: $white;
+    position: absolute;
+    top: 182px;
+    left: 537px;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {
+        top: auto; 
+        bottom: 180px;
+        left: 60%;
+        transform: translateX(-60%);
+    }
+}
+
+.screen-content-document__wrapper {
+    resize: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    min-width: 180px;
+    min-height: 70px;
+    border: 1px solid #5fbfe7;
+    box-sizing: border-box;
+
+    &::-webkit-resizer {
+        opacity: 0;
+    }
+}
+
+.screen-content-document-left {
+    margin: -10px 10px 0 0;
+
+    &.mt-0 {
+        margin-top: 0;
+    }
+}
+
+.screen-content-document__icon {
+    width: 22px;
+    height: 26px;
+}
+
+.screen-content-document__title {
+    margin-bottom: 5px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: $light-black;
+    line-height: 1;
+    letter-spacing: -.1px;   
+}
+
+.screen-content-document__subtitle {
+    font-family: "PTSans", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #95408f; 
+}
+
+.screen-content-text,
+.screen-content-text_children,
+.screen-content-text_board {
+    min-width: 130px;
+    min-height: 45px;
+    background-color: $white;
+    position: absolute;
+    top: 283px;
+    left: 537px;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {   
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint($mobile-bp) {   
+        left: 60%;
+        transform: translateX(-60%);
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        left: 55%;
+        transform: translateX(-55%);
+    }
+
+    &::after {
+        content: '';
+        width: 22px;
+        height: 22px;
+        background: url(../../images/study-room/text-veer.svg) center no-repeat;
+        position: absolute;
+        right: -35px;
+        bottom: -25px;
+        cursor: pointer;
+    }
+}
+
+.screen-content-text {
+    display: none;
+
+    &.active {
+        display: inline;
+    }
+}
+
+.screen-content-text_children {
+    top: 250px;
+    left: 550px;
+
+    @include breakpoint($desktop-bp) {   
+        left: 55%;
+        transform: translateX(-55%);
+    }
+
+    @include breakpoint($tablet-bp) {
+        top: 200px;  
+        left: 60%;
+        transform: translateX(-60%);
+    }
+
+    @include breakpoint($mobile-bp) {
+        left: 65%;
+        transform: translateX(-65%);
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        top: 165px;
+        left: 75%;
+        transform: translateX(-75%);
+    }
+}
+
+.screen-content-text_board {
+    top: 85px;
+    left: 200px;
+
+    @include breakpoint($tablet-bp) {   
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.screen-content-text__wrapper {
+    resize: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    min-width: 130px;
+    min-height: 45px;
+    border: 1px solid #5fbfe7;
+    box-sizing: border-box;
+
+    &::-webkit-resizer {
+        opacity: 0;
+    }
+}
+
+.screen-content-text__input {
+    width: 104px;
+    border: none;
+    background-color: inherit;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 15px;
+    color: #9ca8ae;
+    line-height: 1.33;
+    letter-spacing: -.2px;
+
+    &::placeholder {
+        color: #9ca8ae;
+    }
+}
+.insert-video {
+    margin: 10px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 935px;
+
+    @include breakpoint($tablet-bp) { 
+        padding: 0;
+    }
+}
+
+.insert-video__title {
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 24px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    text-align: center;
+}
+
+.insert-video__label-block {
+    margin-right: 20px;
+    padding-left: 60px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) { 
+        padding-left: 45px;  
+    }
+
+    @include breakpoint($mobile-sm-bp) {   
+        padding-left: 35px;
+    }
+}
+
+.insert-video__input {
+    width: 100%;
+    border: none;
+    background-color: inherit;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($notebook-bp) {
+        font-size: 20px;
+    }
+
+    @include breakpoint($tablet-bp) {  
+        font-size: 18px;
+    }
+
+    @include breakpoint($mobile-bp) {   
+        font-size: 17px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {   
+        font-size: 16px;
+    }
+}
+
+.insert-video__label-btn {
+    padding: 0 21px;
+    width: fit-content;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: $blue;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    color: $white;
+    letter-spacing: -.2px;
+    cursor: pointer;
+
+    @include breakpoint($tablet-bp) {
+        padding: 0 15px;
+        height: 35px;  
+        font-size: 15px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 30px;   
+        font-size: 13px;
+    }
+}

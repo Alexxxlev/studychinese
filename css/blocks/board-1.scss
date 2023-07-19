@@ -1,0 +1,467 @@
+.board-1 {
+    margin: 35px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 930px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {
+        margin: 15px 0 0;
+        padding: 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 0;
+    }
+}
+
+.board-1__header {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 25px;
+    }
+}
+
+.board-1__header-suptitle,
+.board-1__header-subtitle {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 24px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 18px;
+    }
+}
+
+.board-1__header-item {
+    margin: 25px 0 10px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($mobile-bp) {
+        margin: 20px 0 10px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 15px 0 10px;
+    }
+}
+
+.board-1__header-title {
+    margin-right: 25px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 60px;
+    color: $light-black;
+    line-height: .45;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 35px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 30px;
+    }
+}
+
+.board-1__header-label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    width: 105px;
+    height: 70px;
+    border-radius: 8px;
+    background-color: $white;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url(../../images/study-room/board-1-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.board-1__header-input {
+    margin: 0;
+    padding: 0 10px;
+    width: inherit;
+    height: 60px;
+    border: none;
+    background-color: inherit;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 55px;
+    color: $light-black;
+    line-height: .45;
+    letter-spacing: -.2px;
+    box-sizing: border-box;
+
+    @include breakpoint($mobile-bp) {
+        height: 50px;
+        font-size: 35px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 40px;
+        font-size: 30px;
+    }
+}
+
+.board-1__btn-listen {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+    height: 70px;
+    border: 1px solid #c9e5f3;
+    border-radius: 30px;
+    background-color: $white;
+    transition: all .2s linear;
+    position: relative;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        width: 80px;
+        height: 60px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 70px;
+        height: 50px;
+    }
+
+    &::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-color: $blue;
+        mask: url(../../images/study-room/tests/listen-blue.svg) center no-repeat;
+        -webkit-mask: url(../../images/study-room/tests/listen-blue.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        position: absolute;
+        transition: all .2s linear;
+
+        @include breakpoint($mobile-bp) {
+            width: 35px;
+            height: 35px;
+        }
+        @include breakpoint($mobile-sm-bp) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $blue;
+        
+        &::before {
+            background-color: $white;
+        }
+    }
+}
+
+.board-1__main {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.board-1__main-label,
+.insert-video__label {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: $white;
+    border: 2px solid #e7ebee;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {
+        height: 65px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 60px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 55px;
+    }
+}
+
+.insert-video__label {
+    margin-bottom: 50px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include breakpoint($tablet-bp) {   
+        padding: 0 15px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {   
+        padding: 0 10px;
+    }
+
+    &::before {
+        content: '';
+        width: 34px;
+        height: 28px;
+        background-color: #e5e9ed;
+        mask: url(../../images/study-room/video.svg) center no-repeat;
+        -webkit-mask: url(../../images/study-room/video.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        position: absolute;
+        left: 20px;
+
+        @include breakpoint($tablet-bp) {   
+            width: 30px;
+            height: 24px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {   
+            left: 10px;
+        }
+    }
+}
+
+.board-1__main-label-btn {
+    width: 75px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #e7ebee;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 27px;
+    color: $white;
+    cursor: pointer;
+
+    @include breakpoint($tablet-bp) {
+        width: 60px;
+        font-size: 24px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        width: 55px;
+        font-size: 24px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 50px;
+        font-size: 20px;
+    }
+}
+
+.board-1__main-label-btn-span {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.board-1__main-input {
+    padding: 0 25px;
+    height: auto;
+    border: none;
+    background-color: inherit;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 30px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        padding: 0 20px;
+        font-size: 25px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 0 15px;
+        font-size: 20px;
+    }
+
+    &::placeholder {
+        color: $light-black; 
+    }
+}
+
+.board-1__main-label__notification {
+    padding: 0 15px;
+    display: none;
+    height: 30px;
+    background-color: $white;
+    border: 1px solid #e5e9ec;
+    border-radius: 10px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $grey;
+    line-height: 30px;
+    letter-spacing: -.2px;
+    position: absolute;
+    top: -20px;
+    left: 59px;
+    z-index: 5;
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 0px 10px;
+        width: fit-content;
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
+        position: relative;
+        top: auto;
+        left: 10px;
+        bottom: -10px;
+        box-sizing: border-box;
+    }
+
+    &.open {
+        display: block; 
+    }
+}
+
+.board-1__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 660px;
+    width: 100%;
+}
+
+.board-1__footer-block {
+    display: flex;
+    align-items: center;
+}
+
+.board-1__footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    border-radius: 8px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 65px;
+    letter-spacing: -.2px;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    @include breakpoint($tablet-bp) {
+        height: 60px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 55px;
+        font-size: 17px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+.board-1__footer-btn-prev {
+    width: 40px;
+    background-color: #e5e9ec;
+    border: none;
+    position: relative;
+
+    &::before {
+        content: '';
+        margin-right: 3px;
+        width: 20px;
+        height: 30px;
+        background-color: #cad1d8;
+        mask: url(../../images/study-room/btn-hide.svg) center no-repeat;
+        -webkit-mask: url(../../images/study-room/btn-hide.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        position: absolute;
+        transition: all .2s linear;
+    }
+
+    &:hover {
+        background-color: #cad1d8;
+
+        &::before {
+            background-color: $white;
+        }
+    }
+}
+
+.board-1__footer-btn-grey {
+    margin-right: 10px;
+    width: 130px;
+    background-color: $white;
+    border: 1px solid #e5e9ec;
+    color: #cbccce;
+
+    @include breakpoint($mobile-bp) {
+        width: 110px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 90px;
+    }
+
+    &:hover {
+        background-color: #cbccce;
+        color: $white;
+    }
+}
+
+.board-1__footer-btn-next {
+    width: 255px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+
+    @include breakpoint($mobile-bp) {
+        width: 200px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 160px;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $blue;
+    }
+}

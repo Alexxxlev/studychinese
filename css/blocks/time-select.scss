@@ -1,0 +1,512 @@
+.time-select {
+    margin-right: 15px;
+    width: 140px;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+        width: 120px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-right: 0;
+    }
+
+    &.is-active .time-select__body {
+        display: flex;
+    }
+
+    &.time-select_teacher-registration {
+        margin-right: 0;
+
+        @include breakpoint($mobile-sm-bp) {
+            width: 110px;
+        }
+    }
+}
+
+.date-select,
+.date-select_tests-create {
+    width: 105px;
+    height: auto;
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+        max-width: 205px;
+        width: 100%;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        max-width: none;
+    }
+
+    &.is-active .date-select__body {
+        display: block;
+    }
+    
+    &.date-select_teachers,
+    &.date-select_tests-create,
+    &.date-select_settings {
+        width: 100%;
+
+        @include breakpoint($mobile-bp) {
+            max-width: none;
+        }
+    }
+
+    &.date-select_settings {
+        border-radius: 4px;
+    }
+}
+
+.time-select__header {
+    padding: 10px 20px 10px 60px;
+    background: url(../images/time.svg) 22px center no-repeat;
+    background-color: #f7f9fa;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+
+    @include breakpoint($mobile-bp) {
+        padding: 5px 10px 5px 50px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 5px 10px 5px 45px;
+        background-position: 15px center;
+    }
+
+    &.time-select__header_select-days {
+        background-color: $white;
+    }
+}
+
+.date-select__header,
+.date-select__header_tests-create {
+    padding: 0 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+
+    @include breakpoint($mobile-bp) {
+        height: 45px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 40px;
+    }
+}
+
+.date-select__header_tests-create {
+    padding: 0 20px;
+
+    @include breakpoint($tablet-bp) {
+        height: 40px;
+    }
+}
+
+.time-select__current {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $light-black;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 18px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 16px;
+    }
+}
+
+.date-select__current {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $light-black;
+
+    @include breakpoint($notebook-bp) {
+        font-size: 18px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 16px;
+    }
+
+    &.date-select__current_settings {
+        font-family: "PTSans", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #4b465a;
+        letter-spacing: -.2px;
+    }
+}
+
+.date-select__current-span {
+    border-bottom: 1px solid #baccd5;
+}
+
+.date-select__current-img-mirrored,
+.date-select__current-img_settings {
+    width: 11px;
+    height: 11px;
+    border: none;
+    background-color: inherit;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url(../../images/arrow-prev.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(-1, 1);
+    }
+}
+
+.date-select__current-img_settings {
+    width: 9px;
+    height: 9px;
+
+    &::before {
+        background-image: url(../../images/study-room/triangle.svg);
+        transform: scale(1, 1);
+    }
+}
+
+.time-select__body {
+    padding: 0 19px 0 10px;
+	display: none;
+    width: 140px;
+    height: 280px;
+    background-color: #f7f9fa;
+    border-radius: 10px;
+	position: absolute;
+    top: -231px;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 3;
+
+    @include breakpoint($mobile-bp) {
+        width: 120px;
+        height: 268px;
+    }
+
+    &::after {
+        content: '';
+        width: 120px;
+        height: 1px;
+        background-color: #c0c8cc;
+        position: absolute;
+        bottom: 49px;
+
+        @include breakpoint($mobile-bp) {
+            width: 100px;
+            bottom: 37px;
+        }
+    }
+
+    &.time-select__body_select-days {
+        width: 141px;
+        border: 1px solid #e7eaef;
+        background-color: $white;
+        box-shadow: 4px 4px 27px 4px rgba(20, 60, 79, 0.10);
+        left: -1px;
+        z-index: 4;
+
+        @include breakpoint($mobile-bp) {
+            width: 122px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            padding: 0 15px 0 10px;
+            width: 110px;
+        }
+
+        &::after {
+            content: '';
+            background-color: #ececec;
+
+            @include breakpoint($mobile-sm-bp) {
+                width: 80px;
+            }
+        }
+    }
+}
+
+.date-select__body {
+    display: none;
+    width: 105px;
+    height: auto;
+    background-color: #e7ebee;
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    @include breakpoint($mobile-bp) {
+        width: 205px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 100%;
+    }
+
+    &.date-select__body_teachers {
+        width: 100%;
+
+        @include breakpoint($tablet-bp) {
+            border-radius: 0 0 10px 10px;
+            position: relative;
+        }
+    }
+
+    &.date-select__body_tests-create,
+    &.date-select__body_settings {
+        width: 100%;
+        position: relative;
+
+        @include breakpoint($tablet-bp) {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    &.date-select__body_settings {
+        border-radius: 0;
+    }
+}
+
+.time-select__inner {
+    width: 100%;
+    height: 195px;
+    scrollbar-width: thin;
+    scrollbar-color: #36a9e0 #f2f2f2;
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    top: 24px;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: auto;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #c0c8cc;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #36a9e0;
+    }
+
+    &.time-select__inner_select-days {
+        &::-webkit-scrollbar-track {
+            background: #f2f2f2;
+        }
+    }
+}
+
+.date-select__inner {
+    margin-top: 55px;
+
+    &.date-select__inner_teacher-registration {
+        @include breakpoint($tablet-bp) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.date-select__inner_tests-create {
+    margin-top: 10px;
+}
+
+.time-select__items {
+    margin-right: 13px;
+}
+
+.time-select__item {
+    padding: .5px 40px .5px 15px;
+    background-color: #f7f9fa;
+    border-radius: 7px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2c2c38;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        background-color: #e5e9eb;
+    }
+
+    &.time-select__item_select-days {
+        background-color: $white;
+
+        &:hover {
+            background-color: #f5f6f8;    
+        }
+    }
+}
+
+.date-select__item {
+    margin-bottom: 5px;
+    padding: 0 12px 0 17px;
+    width: 100%;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $light-black;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: inherit;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($notebook-bp) {
+        font-size: 18px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #ccd2d6;
+    }
+
+    &.date-select__item_settings {
+        font-family: "PTSans", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #4b465a;
+        letter-spacing: -.2px;
+    }
+}
+
+.date-select__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.date-select__item-left {
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap{
+    width: 225px;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap .default_option{
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select_wrap .default_option li{
+    padding: 10px 20px;
+}
+
+.select_wrap .default_option:before{
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-color: transparent transparent #555555 #555555;
+    transform: rotate(-45deg);
+}
+
+.select_wrap .select_ul{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+.select_wrap .select_ul li{
+padding: 10px 20px;
+cursor: pointer;
+}
+
+.select_wrap .select_ul li:first-child:hover{
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.select_wrap .select_ul li:last-child:hover{
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.select_wrap .select_ul li:hover{
+background: #fff4dd;
+}
+
+.select_wrap .option{
+display: flex;
+align-items: center;
+}
+
+.select_wrap .option .icon{
+background: url('https://i.imgur.com/oEZu0sK.png') no-repeat 0 0;
+    width: 32px;
+    height: 32px;
+margin-right: 15px;
+}
+
+.select_wrap .option.pizza .icon{
+background-position: 0 0;
+}
+
+.select_wrap .option.burger .icon{
+background-position:  0 -35px;
+}
+
+.select_wrap .option.ice .icon{
+background-position: 0 -72px;
+}
+
+.select_wrap .option.fries .icon{
+background-position: 0 -111px;
+width: 25px;
+}
+
+.select_wrap.active .select_ul{
+display: block;
+}
+
+.select_wrap.active .default_option:before{
+top: 25px;
+transform: rotate(-225deg);
+}

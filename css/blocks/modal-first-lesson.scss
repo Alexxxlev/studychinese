@@ -1,0 +1,51 @@
+.first-lesson-block {
+    display: flex;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 260px;
+    }
+}
+
+.first-lesson-bg {
+    position: absolute;
+    top: 40px;
+    right: -185px;
+    transform: scale(-1, 1);
+
+    @include breakpoint($mobile-bp) {
+        position: static;
+    }
+}
+
+.first-lesson-bg-icon {
+    width: 265px;
+    height: 350px;
+
+    @include breakpoint($mobile-bp) {
+        width: 98px;
+        height: 130px;
+    }
+}
+
+.conversation-form__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.done {
+        &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: url(../../images/done.svg) center no-repeat;
+            background-size: contain;
+            -webkit-background-size: contain;
+            position: absolute;
+            right: 15px;
+        }
+    }
+}

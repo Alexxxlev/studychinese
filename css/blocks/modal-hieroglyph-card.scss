@@ -1,0 +1,403 @@
+.hieroglyph-card__title {
+    margin-bottom: 15px;
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 36px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 30px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 25px;
+    }
+}
+
+.hieroglyph-card-items {
+    margin-bottom: 25px;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.hieroglyph-card-item {
+    margin-bottom: 10px;
+}
+
+.hieroglyph-card-item__suptitle {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 14px;
+    color: $grey;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 13px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 12px;
+    }
+}
+
+.hieroglyph-card-item__label {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 3px 3px 6px 0 rgba(4, 14, 24, .04);
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include breakpoint($mobile-bp) {
+        height: 40px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 35px;
+    }
+}
+
+.hieroglyph-card-item__input-left {
+    width: 70px;
+    height: 100%;
+    border: none;
+    background-color: #eff2f4;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: #868891;
+    text-align: center;
+
+    @include breakpoint($mobile-bp) {
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+.hieroglyph-card-item__input-right {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    border: none; 
+    font-family: "SimSun", sans-serif;
+    font-size: 25px;
+    color: $light-black;
+
+    @include breakpoint($mobile-bp) {
+        padding: 0px 15px;
+        font-size: 17px;
+    }
+}
+
+.hieroglyph-card-item__input {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $light-black;
+
+    @include breakpoint($mobile-bp) {
+        padding: 0px 15px;
+        font-size: 16px;
+    }
+}
+
+.hieroglyph-card-item__subtitle {
+    margin-top: 3px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 12px;
+    color: $grey;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 11px;
+    }
+}
+
+.hieroglyph-card__footer-line {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint($tablet-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 0 0 15px;
+    }
+}
+
+.hieroglyph-card__add-more {
+    font-family: $font-secondary;
+    font-size: 16px;
+    color: #4b465a;
+    border-bottom: 1px dotted #4b465a;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 14px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 13px;
+    }
+
+    &:hover {
+        color: $purple;
+        border-color: $purple;
+    }
+
+    &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: url(../../images/arrow-nav.svg) center no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        transform: rotate(90deg);
+    }
+}
+
+.hieroglyph-card__footer-btns {
+    @include breakpoint($tablet-bp) {
+        margin: 15px 0 0 auto;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 15px auto 0;
+    }
+}
+
+.hieroglyph-card__footer-btn__delete {
+    margin-right: 8px;
+    padding: 0 15px;
+    width: fit-content;
+    height: 40px;
+    border: 1px solid $blue;
+    border-radius: 30px;
+    background-color: $white;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: $blue;
+    line-height: 40px;
+    letter-spacing: -.2px;
+    transition: all .2s linear;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}
+
+.hieroglyph-card__footer-btn__add {
+    padding: 0 35px;
+    width: fit-content;
+    height: 40px;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    background-color: $blue;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: $white;
+    line-height: 40px;
+    letter-spacing: -.2px;
+    transition: all .2s linear;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: $blue;
+    }
+}
+
+.hieroglyph-card__footer-notification {
+    display: flex;
+    align-items: center;
+}
+
+.hieroglyph-card__footer-notification__icon {
+    width: 18px;
+    height: 18px;
+}
+
+.hieroglyph-card__footer-notification__text {
+    margin-left: 8px;
+    font-family: "PTSans", sans-serif;
+    font-size: 12px;
+    color: #919193;
+    line-height: 1.5;
+    letter-spacing: -.1px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 11px;
+    }
+}
+
+.modal-hieroglyph-card-shipped__content,
+.modal__dialog-teacher-registration__content {
+    display: flex;
+    position: relative;
+
+    @include breakpoint($mobile-sm-bp) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+.modal__dialog-teacher-registration__content {
+    height: 260px;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+    }
+}
+
+.modal-hieroglyph-card-shipped__title {
+    margin-bottom: 25px;
+    max-width: 270px;
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 44px;
+    color: #954090;
+    line-height: .8;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 40px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        max-width: none;
+        font-size: 35px;
+        text-align: center;
+    }
+}
+
+.modal-hieroglyph-card-shipped__text {
+    max-width: 330px;
+    font-family: $font-secondary;
+    font-size: 18px;
+    color: #4b465a;
+    line-height: 1.22;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 16px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 14px;
+    }
+}
+
+.modal-hieroglyph-card-shipped__right,
+.modal__dialog-teacher-registration__right {
+    position: absolute;
+    right: 35px;
+    bottom: -145px;
+
+    @include breakpoint($mobile-bp) {
+        right: -10px;
+        bottom: -115px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        position: static;
+    }
+}
+
+.modal__dialog-teacher-registration__right {
+    right: -20px;
+    bottom: -85px;
+
+    @include breakpoint($mobile-bp) {
+        position: static;
+        right: -10px;
+        bottom: -115px;
+    }
+}
+
+.modal-hieroglyph-card-shipped__icon,
+.modal__dialog-teacher-registration__icon {
+    width: 206px;
+    height: 252px;
+
+    @include breakpoint($mobile-bp) {
+        width: 156px;
+        height: 202px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 10px;
+        width: 126px;
+        height: 172px;
+    }
+}
+
+.modal__dialog-teacher-registration__icon {
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 10px;
+        width: 126px;
+        height: 172px;
+    }
+}

@@ -1,0 +1,712 @@
+.indicators-month {
+    margin-top: 15px;
+    padding: 20px 35px 20px 40px ;
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 5px 5px 46px 0 rgba(5, 22, 26, .06);
+    position: relative;
+    z-index: 2;
+}
+
+.indicators-month__title {
+    margin-bottom: 12px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 16px;
+    }
+}
+
+.indicators-month__info {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+    }
+}
+
+.indicators-month__info-icon {
+    margin-right: 20px;
+    width: 54px;
+    height: 54px;
+
+    @include breakpoint($mobile-bp) {
+       display: none;
+    }
+}
+
+.indicators-month__info-items {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 440px;
+    width: 100%;
+}
+
+.indicators-month__info-item-suptitle {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 12px;
+    color: #a6b0b6;
+    letter-spacing: -.2px;
+}
+
+.indicators-month__info-item-number {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 30px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 24px;
+    }
+}
+
+.indicators-month__info-line {
+    width: 1px;
+    height: auto;
+    background-color: #e3e8eb;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 0 17px;
+    }
+}
+
+.your-teachers {
+    margin-top: 30px;
+    position: relative;
+}
+
+.your-teachers__title {
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 22px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 18px;
+    }
+}
+
+.your-teachers__main {
+    overflow: hidden;
+}
+
+.your-teachers__item {
+    max-width: 250px;
+    width: 100%;
+    border-bottom: 1px solid #e4e9ec;
+
+    @include breakpoint($mobile-sm-bp) {
+        border-bottom: none;
+    }
+}
+
+.child-card {
+    margin-top: 20px;
+    padding: 35px 55px 45px 50px;
+    border-radius: 30px;
+    background-color: $white;
+    box-shadow: 5px 5px 46px 0 rgba(5, 22, 26, .06);
+
+    @include breakpoint($mobile-bp) {
+        padding: 30px;
+    }
+}
+
+.child-card__header-title {
+    margin-bottom: 15px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+
+.child-card__header-text {
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 15px;
+    color: $light-black;
+    line-height: 1.46;
+    letter-spacing: -.1px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 14px;
+        line-height: 1.28;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+}
+
+.child-card__header-children {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e7ed;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+.child-card__header-children-block {
+    display: flex;
+}
+
+.child-card__header-children-item {
+    margin-right: 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid transparent;
+    font-family: $font-secondary;
+    font-size: 18px;
+    color: #8c8c9d;
+    letter-spacing: -.1px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($mobile-bp) {
+        margin-right: 15px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-right: 10px;
+        padding-bottom: 7px;
+        font-size: 16px;
+    }
+}
+
+.child-card__header-add-child {
+    padding-bottom: 12px;
+    border: none;
+    border-bottom: 1px solid #36a9e0;
+    background-color: transparent;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    color: #36a9e0;
+    letter-spacing: -.2px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.child-card__main {
+    margin-bottom: 30px;
+    display: none;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.child-card__inputs {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+    }
+
+    select {
+        display: none;
+    }
+}
+
+.child-card__block {
+    display: flex;
+    align-items: flex-end;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 5px;
+        justify-content: center;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.child-card__item {
+    margin-right: 7px;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 0 0 8px;
+        width: 100%;
+    }
+
+    &.mb-15 {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.my-data {
+        margin-bottom: 20px;
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &.w-100p {
+        width: 100%;
+
+        @include breakpoint($desktop-big-bp) {
+            max-width: 556px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            margin-right: 0;
+            max-width: none;
+        }
+    }
+
+    &.mr-30 {
+        margin-right: 30px;
+
+        @include breakpoint($tablet-bp) {
+            margin: 0 0 10px;
+            width: 100%;
+        }
+    }
+
+    &.child-card__item_index {
+        width: 255px;
+
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+        }
+    }
+
+    &.child-card__item_teacher-registration {
+        @include breakpoint($tablet-bp) {
+            margin: 0 0 10px;
+            width: 100%;
+        }
+    }
+}
+
+.child-card__input-suptitle {
+    margin-bottom: 2px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 14px;
+    color: $grey;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 5px;
+    }
+
+    &.child-card__input-suptitle_teacher-registration {
+        @include breakpoint($tablet-bp) {
+            margin-top: 15px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-top: 10px;
+            font-size: 11.5px;
+            letter-spacing: -.5px;
+        }
+    }
+}
+
+.select {
+    display: none;
+}
+
+.child-card__item-block {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: url(../../images/russian-flag.svg);
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+    }
+}
+
+.child-card__input {
+    padding-left: 20px;
+    max-width: 205px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $light-black;
+
+    @include breakpoint($notebook-bp) {
+        font-size: 18px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 45px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 100%;
+        max-width: none;
+        height: 40px;
+    }
+
+    &::placeholder {
+        color:  $light-black;
+    }
+    
+    &.minw-556 {
+        min-width: 556px;
+
+        @include breakpoint($tablet-bp) {
+            min-width: auto;
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &.maxw-none {
+        max-width: none;
+
+        @include breakpoint($desktop-big-bp) {
+            max-width: 800px;
+        }
+    }
+
+    &.child-card__input__description {
+        max-width: none;
+        height: 70px;
+    }
+    
+    &.child-card__input_teacher-registration {
+        max-width: none;
+        width: 265px;
+
+        @include breakpoint($tablet-bp) {
+            width: 100%;
+        }
+    }
+
+    &.date {
+        padding-left: 0;
+        max-width: 170px;
+        text-align: center;
+
+        @include breakpoint($notebook-bp) {
+            max-width: none;
+            width: 135px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            padding-left: 20px;
+            max-width: 205px;
+            width: 100%;
+            text-align: left;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &.my-data {
+        min-width: 255px;
+
+        @include breakpoint($desktop-bp) {
+            min-width: 235px;
+        }
+
+        @include breakpoint($notebook-bp) {
+            min-width: 225px;
+        } 
+
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.tel {
+            padding-left: 40px;
+        }
+    }
+
+    &.minw-265 {
+        min-width: 265px;
+
+        @include breakpoint($tablet-bp) {
+            min-width: auto;
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &.minw-255 {
+        min-width: 255px;
+
+        @include breakpoint($mobile-bp) {
+            min-width: auto;
+            max-width: 303px;
+        }
+    }
+}
+
+.child-card__input-hint {
+    margin-top: 2px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 12px;
+    color: #bab9c1;
+    letter-spacing: -.2px;
+}
+
+.child-card__textarea {
+    padding: 12px 22px;
+    width: 100%;
+    min-height: 160px;
+    border: 1px solid #e7ebee;
+    border-radius: 30px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $light-black;
+    resize: none;
+    box-sizing: border-box;
+
+    @include breakpoint($mobile-bp) {
+        min-height: 140px;
+        border-radius: 20px;
+        font-size: 17px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        min-height: 120px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    &::placeholder {
+        color: $light-black;
+    }
+}
+
+.child-card__btn {
+    margin: 0 auto;
+    width: 140px;
+    height: 40px;
+    display: block;
+    background-color: transparent;
+    border: 1px solid #36a9e0;
+    border-radius: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: #36a9e0;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #36a9e0;
+        color: $white;
+    }
+}
+
+.settings-my-data {
+    margin-top: 20px;
+}
+
+.settings-my-data__title {
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 22px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 18px;
+    }
+}
+
+.settings-my-data__main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint($tablet-bp) {
+        justify-content: center;
+    } 
+}
+
+.settings-btns {
+    margin: 25px 0 30px;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 25px auto 30px;
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    &.settings-btns_teacher-registration {
+        @include breakpoint($mobile-bp) {
+            margin: 25px auto 30px;
+            flex-direction: column;
+            align-items: center;
+            max-width: 320px;
+            width: 100%;
+        }
+    }
+}
+
+.settings-btn-return {
+    padding: 0 30px;
+    margin-right: 10px;
+    display: block;
+    max-width: none;
+    width: fit-content;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #36a9e0;
+    border-radius: 8px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: #36a9e0;
+    letter-spacing: -.2px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .2s linear;
+    box-sizing: border-box;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 0 0 10px;
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #36a9e0;
+        color: $white;
+    }
+
+    &.settings-btn-return_teacher-registration {
+        @include breakpoint($mobile-bp) {
+            margin: 0 0 10px;
+            max-width: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.settings-btn-save {
+    display: block;
+    max-width: 225px;
+    width: 100%;
+    height: 40px;
+    background-color: #954090;
+    border: 1px solid #954090;
+    border-radius: 8px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;
+    letter-spacing: -.2px;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 10px;
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: #954090;
+    }
+
+    &.settings-btn-save_teacher-registration {
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 10px;
+            max-width: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

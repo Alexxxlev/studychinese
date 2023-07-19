@@ -1,0 +1,227 @@
+.advertising-training {
+    margin: 55px auto;
+    display: flex;
+    justify-content: center;
+
+    &.advertising-training_teachers {
+        margin: 25px auto 65px;
+        justify-content: end;
+
+        @include breakpoint($desktop-bp) {
+            margin: 25px auto;
+            justify-content: center;
+        }
+    }
+
+    &.advertising-training_teacher-info {
+        margin: 0 auto 25px;
+        padding-top: 30px;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        border-top: 1px solid #e6ebef;
+
+        @include breakpoint($tablet-bp) {
+            padding-top: 0;
+            flex-direction: column;
+            height: auto;
+            border-top: none;
+        }
+
+        @include breakpoint($mobile-bp) {
+            margin: 0 auto 25px;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: -15px auto 35px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: -30px auto 25px;
+    }
+}
+
+.advertising-training-img {
+    margin-right: 25px;
+    width: 204px;
+    height: 222px;
+
+    &.advertising-training-img_teachers {
+        margin-right: 75px;
+
+        @include breakpoint($mobile-bp) {
+            margin-right: 0;
+        }
+    }
+
+    &.advertising-training-img_teacher-info {
+        margin-right: 30px;
+        width: 281px;
+        height: 148px;
+
+        @include breakpoint($mobile-bp) {
+            margin-right: 0;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            width: 225px;
+            height: 115px;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin:0 0 10px;
+        width: 184px;
+        height: 202px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 140px;
+        height: 150px;
+    }
+}
+
+.advertising-training__right {
+    max-width: 600px;
+    
+    &.advertising-training__right_teachers {
+        padding-right: 20px;
+
+        @include breakpoint($mobile-sm-bp) {
+            padding-right: 0;
+        }
+    }
+
+    &.advertising-training__right_teacher-info {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        max-width: 520px;
+    }
+}
+
+.advertising-training__title {
+    margin-bottom: 25px;
+    color: $light-black;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+
+    strong {
+        color: #954090;
+        font-weight: 800;
+    }
+
+    @include breakpoint($desktop-bp) {
+        max-width: 460px;
+        font-size: 36px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        max-width: 400px;
+        font-size: 34px;
+        text-align: center;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 20px;
+        max-width: 360px;
+        font-size: 28px;
+    }
+
+    &.advertising-training__title_teacher-info {
+        font-size: 30px;
+
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-bottom: 10px;
+
+        }
+    }
+}
+
+.advertising-training__text {
+    margin-bottom: 25px;
+    font-family: $font-secondary;
+    font-size: 18px;
+    letter-spacing: -.2px;
+    color: #4b465a;
+
+    @include breakpoint($desktop-bp) {
+        font-size: 15px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 auto 25px;
+        max-width: 251px;
+        text-align: center;
+    }
+
+    &.advertising-training__text_teacher-info {
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 20px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.advertising-training__btn {
+    display: block;
+    max-width: 255px;
+    width: 100%;
+    height: 65px;
+    color: $white;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -.2px;
+    background: linear-gradient(#954090, #954090);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 auto;
+        max-width: none;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 60px;
+    }
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(#954090, #c357bd);
+        background: -webkit-linear-gradient(#954090, #c357bd);
+        background: -moz-linear-gradient(#954090, #c357bd);
+        background: -o-linear-gradient(#954090, #c357bd);
+        background: -ms-linear-gradient(#954090, #c357bd);
+    }
+
+    &.advertising-training__btn_teacher-info {
+        @include breakpoint($tablet-bp) {
+            margin-right: 20px;
+            max-width: 305px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            margin: 0 20px 0 0;
+        }
+    }
+}

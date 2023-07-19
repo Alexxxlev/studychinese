@@ -1,0 +1,146 @@
+.modal-add-board__title {
+    margin-bottom: 40px;
+    max-width: 530px;
+    width: 100%;
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 35px;
+    color: #865597;
+    line-height: 1.2;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 30px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 20px;
+        max-width: 310px;
+        font-size: 18px;
+    } 
+}
+
+.modal-add-board__main {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($mobile-sm-bp) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.modal-add-board__item {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 190px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    background-color: $white;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        padding: 15px 0px;
+        max-width: 160px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.active,
+    &:hover,
+    &:focus-within,
+    &:focus {
+        border: 2px solid #954091;
+
+        .modal-add-board__item-title {
+            font-weight: 700;
+        }
+    }
+}
+
+.modal-add-board__item-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.modal-add-board__item-title {
+    margin: 15px 0 3px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 19px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    line-height: 1;
+    text-align: center;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 17px;
+    }
+}
+
+.modal-add-board__item-subtitle {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $grey;
+    letter-spacing: -.2px;
+    text-align: center;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 13px;
+    }
+}
+
+.modal-add-board__btn {
+    width: 100%;
+    height: 65px;
+    border: 1px solid $blue;
+    border-radius: 8px;
+    background-color: $blue;
+    font-family: $font-secondary;
+    font-weight: 700;
+    color: $white;
+    line-height: 65px;
+    letter-spacing: -.2px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all .2s linear;
+
+    @include breakpoint($tablet-bp) {
+        height: 55px;
+        line-height: 55px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        height: 50px;
+        font-size: 17px;
+        line-height: 50px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    &:hover,
+    &:focus-within {
+        background-color: $white;
+        color: $blue;
+    }
+}

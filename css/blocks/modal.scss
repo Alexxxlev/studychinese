@@ -1,0 +1,1420 @@
+.modal.show {
+    display: flex !important;
+}
+
+.modal_cancel-lesson.show {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: auto;
+    background-color: rgba(35, 39, 54, .55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    box-sizing: border-box;
+
+    &.modal_add-lesson,
+    &.modal_not-registered,
+    &.modal-select-days,
+    &.modal_add-board {
+        background-color: transparent;
+        z-index: 5001;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+.modal__dialog {
+    margin: auto;
+    padding: 50px 100px;
+    max-width: 933px;
+    width: 100%;
+    box-shadow: 0 5px 46px rgba(5, 22, 26, .24);
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transform: scale(0);
+
+    @include breakpoint($tablet-bp) {
+        padding: 30px 60px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 30px;
+    }
+
+    &.modal__dialog-teacher-registration {
+        padding: 30px 55px;
+        max-width: 645px;
+
+        @include breakpoint($mobile-bp) {
+            padding: 25px 40px;
+            max-width: 380px;
+        }
+        
+        select {
+            display: none;
+        }
+    }
+
+    &.modal__dialog-teacher-registration-shipped {
+        padding: 40px 55px;
+        max-width: 645px;
+
+        @include breakpoint($mobile-bp) {
+            padding: 25px 40px 35px;
+            max-width: 380px;
+        }
+    }
+
+    &.modal__dialog_add-board {
+        padding: 40px 100px;
+        max-width: 840px;
+
+        @include breakpoint($tablet-bp) {
+            padding: 40px 20px;
+            max-width: 650px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            padding: 30px 20px;
+            max-width: 430px;
+        } 
+    }
+
+    &.modal__dialog-hieroglyph-card {
+        padding: 35px 120px;
+        max-width: 840px;
+
+        @include breakpoint($tablet-bp) {
+            padding: 35px 40px;
+            max-width: 600px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            padding: 25px 20px;
+        }
+    }
+
+    &.modal__dialog-hieroglyph-card-shipped {
+        padding: 50px 40px 60px 85px;
+        max-width: 735px;
+        min-height: 285px;
+
+        @include breakpoint($mobile-bp) {
+            padding: 35px 40px;
+            max-width: 540px;
+            min-height: 240px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            padding: 25px 40px;
+            max-width: 390px;
+        }
+    }
+
+    &.modal__dialog-first-lesson {
+        padding: 40px 95px;
+        max-width: 735px;
+        overflow: hidden;
+
+        @include breakpoint($mobile-bp) {
+            max-width: 320px;
+            padding: 15px 25px 40px;
+        }
+
+        select {
+            display: none;
+        }
+    }
+
+    &.modal__dialog-select-days {
+        padding: 40px 75px;
+        max-width: 855px;
+
+        @include breakpoint($tablet-bp) {
+            padding: 20px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            max-width: 545px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            max-width: 450px;
+        }
+    }
+
+    &.modal__dialog_cancel-lesson {
+        padding: 30px;
+        max-width: 550px;
+    }
+
+    &.modal__dialog_not-registered {
+        padding: 25px;
+        max-width: 320px;
+    }
+
+    &.modal__dialog_replenish {
+        padding: 50px 40px 65px 95px;
+        max-width: 1110px;
+
+        @include breakpoint($notebook-bp) {
+            padding: 40px 25px 40px 60px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            max-width: 700px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            padding: 30px 9px 30px 9px;
+            max-width: 380px;
+        }
+    }
+
+    &.modal__dialog_record {
+        padding: 50px 40px 65px 95px;
+        max-width: 1110px;
+
+        @include breakpoint($desktop-big-bp) {
+            max-width: 1050px;
+        }
+
+        @include breakpoint($desktop-bp) {
+            max-width: 850px;
+        }
+
+        @include breakpoint($notebook-bp) {
+            padding: 40px 25px 40px 60px;
+            max-width: 800px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            padding: 40px 25px 40px 40px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            padding: 16px 10px;
+            max-width: 343px;
+            max-height: 578px;
+            overflow: hidden;
+        }
+    }
+
+    &.modal__dialog_add-lesson,
+    &.modal__dialog_lesson-added {
+        padding: 25px;
+        max-width: 320px;
+    }
+
+    &.modal__dialog_sm {
+        padding: 25px 30px 40px;
+        width: 325px;
+        box-sizing: border-box;
+    } 
+}
+
+.modal-homework__header_cancel-lesson {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-homework__title-icon {
+    margin-right: 10px;
+}
+
+.modal-homework__title {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.77;
+    color: $purple;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 27px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 20px;
+        max-width: 180px;
+        font-size: 20px;
+        line-height: 1;
+
+        &.modal-homework__title_add {
+            max-width: 250px;
+        }
+
+        &.modal-club__replenish {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 190px;
+        }
+
+        &.modal-homework__title_teacher-registration {
+            margin: 7px 0 15px;
+            max-width: none;
+            font-size: 18px;
+        }
+    }
+
+    &.modal-homework__title_cancel-lesson {
+        font-size: 25px;
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-bottom: 0;
+            font-size: 24px;
+        }
+    }
+}
+
+.modal-homework__lesson {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+    }
+}
+
+.modal-homework__lesson-left {
+    margin-right: 15px;
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 0 13px;
+    }
+}
+
+.modal-homework__lesson-title {
+    margin-bottom: 7px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    color: $black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 15px;
+    }
+
+    &.mobile-none {
+
+        @include breakpoint($mobile-bp) {
+            display: none;
+        }
+    }
+}
+
+.lesson-name {
+    display: flex;
+}
+
+.lesson-name__img {
+    margin: 5px 15px 0 0;
+
+    @include breakpoint($mobile-bp) {
+        margin: 5px 22px 0 12px;
+    }
+}
+
+.topic__item {
+    margin-bottom: 15px;
+}
+
+.topic__item-suptitle,
+.topic__item-title {
+    font-family: $font-secondary;
+    font-weight: 700;
+}
+
+.topic__item-suptitle {
+    font-size: 14px;
+    color: $grey;
+    letter-spacing: -.2px;
+}
+
+.topic__item-title {
+    font-size: 20px;
+    color: $light-black;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 17px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        font-size: 15px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 14px;
+    }
+}
+
+.attach-file {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    &.attach-file_messages {
+        margin-bottom: 0;
+    }
+}
+
+.attach-file__icon {
+    margin-right: 9px;
+    transform: rotate(90deg);
+}
+
+.attach-file__icon__input {
+    display: none; 
+}
+
+.attach-file__icon__label,
+.add-links__add-more {
+    font-family: $font-secondary;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4b465a;
+    border-bottom: 1px dotted #4b465a;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 14px;
+    }
+
+    &:hover {
+        color: $purple;
+        border-color: $purple;
+    }
+
+    &.add-links__add-more_tests-create {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        position: static;
+
+        @include breakpoint($mobile-sm-bp) {
+            transform: none;
+        }
+    }
+    
+    &.attach-file__icon__label_messages {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111115;
+        letter-spacing: -.1px;
+        border: none;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    &.attach-file__icon__label_write-message,
+    &.attach-file__icon__label_study-room {
+        margin-right: 20px;
+        width: 18px;
+        height: 30px;
+        background-color: #9d9fac;
+        mask: url(../../images/attach_write-message.svg) center no-repeat;
+        -webkit-mask: url(../../images/attach_write-message.svg) center no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    
+        &:hover {
+            background-color: #954090;
+        }  
+    }
+
+    &.attach-file__icon__label_study-room {
+        margin-right: 10px;
+    }
+}
+
+.modal-homework__main {
+    padding-top: 5px;
+}
+
+.modal-homework__sms {
+    margin-bottom:15px;
+    max-width: 800px;
+    width: 110%;
+    background-color: #f7f9fa;
+    border-radius: 20px;
+    position: relative;
+    left: -30px;
+
+    @include breakpoint($mobile-sm-bp) {
+        left: -15px;
+    }
+}
+
+.modal-homework__sms-wrapper {
+    padding: 20px 30px 15px 40px;
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 10px 15px 15px 25px;
+    }
+}
+
+.sms-header {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sms-person {
+    display: flex;
+    align-items: flex-end;
+}
+
+.sms-person__avatar {
+    margin-right: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.sms-person__img {
+    width: 100%;
+    height: 100%;
+}
+
+.sms-person__name {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $purple;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 14px;
+    }
+}
+
+.sms-notification {
+    display: flex;
+    align-items: center;
+}
+
+.sms-notification__time {
+    margin-left: 5px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 11px;
+    color: #b9bec1;
+}
+
+.sms-main {
+    margin: 0 55px 10px 0;
+    font-family: 'PTSans', sans-serif;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #4b465a;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 0 10px 0;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 0 5px 10px 0;
+    }
+}
+
+.sms-footer {
+    margin-left: -4px;
+}
+
+.sms-footer__text {
+    margin-bottom: 7px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.6;
+    color: $light-black; 
+}
+
+.sms-footer__files-icon {
+    margin-right: 6px;
+}
+
+.write-message {
+    margin-bottom: 20px;
+
+    &.write-message_add {
+        margin-bottom: 5px;
+    }
+
+    &.write-message_cancel-lesson {
+        margin-bottom: 45px;
+        position: relative;
+
+        &::after {
+            content: 'Например укажите что плотная занятость';
+            font-family: $font-secondary;
+            font-weight: 600;
+            font-size: 12px;
+            color: #afacb6;
+            letter-spacing: -.2px;
+            position: absolute;
+            left: 0;
+            bottom: -25px;
+            z-index: 2;
+        }
+    }
+}
+
+.write-message__title,
+.modal-homework__links-title,
+.add-links__title,
+.period-execution__title {
+    margin-bottom: 5px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $grey;
+    letter-spacing: -.2px;
+    
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 12px;
+    }
+}
+
+.write-message__textarea,
+.add-link__textarea,
+.topic__item__textarea {
+    display: block;
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    border: 1px solid #e7ebee;
+    border-radius: 10px;
+    background: transparent;
+    resize: none;
+
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 20px;
+    color: $black;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 17px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 15px;
+    }
+
+    &::placeholder {
+        color: $light-black;
+    }
+}
+
+.write-message__textarea,
+.topic__item__textarea {
+    padding: 15px 25px;
+    min-height: 100px;
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 16px 15px 10px;
+        min-height: 50px;
+        line-height: 1;
+    }
+
+    &.write-message__textarea_cancel-lesson {
+        @include breakpoint($mobile-sm-bp) {
+            min-height: 100px;
+        }
+    }
+
+    &.write-message__textarea_teacher-registration {
+        padding: 10px 25px;
+        min-height: 70px;
+        line-height: 1;
+        font-size: 18px;
+    }
+}
+
+.topic__item__textarea {
+    padding: 18px 25px 0px;
+    min-height: 50px;
+    line-height: .5;
+}
+
+.add-link__textarea {
+    padding: 15px 60px 0;
+    min-height: 50px;
+    line-height: .8;
+    background: url(../images/add-link.svg) 21px center no-repeat;
+
+    @include breakpoint($mobile-bp) {
+        line-height: 1;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 18px 60px 0;
+    }
+
+    &::placeholder {
+        margin-left: 20px;
+    }
+}
+
+.modal-homework__links {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-homework__links-title {
+   margin-bottom: 8px;
+   height: auto;
+}
+
+.modal-homework__links-link {
+    padding-left: 12px;
+    margin-bottom:5px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #4b465a;
+    border: none;
+    text-decoration: none;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 14px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        line-height: 1;
+    }
+
+    &:hover {
+        text-decoration: underline #954090;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #954090;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        z-index: 2;
+    }
+}
+
+.modal-homework__links-passed {
+    color: #349138;
+}
+
+.modal-homework__links-notpassed {
+    color: #d25078;
+}
+
+.add-links {
+    position: relative;
+
+    &::after {
+        content: 'Ссылку можно скопировать из любого теста или упражнения';
+        margin-left: 10px;
+        width: 100%;
+        height: auto;
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: 12px;
+        color: #afacb6;
+        letter-spacing: -.2px; 
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        z-index: 2;
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-left: 0;
+            max-width: 300px;
+            bottom: -35px;
+        }
+    }
+}
+
+.add-link {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.add-links__add-more {
+    font-weight: 600;
+    position: absolute;
+    right: 20px;
+    z-index: 3;
+
+    @include breakpoint($mobile-bp) {
+        bottom: -50px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        right: 50%;
+        bottom: -60px;
+        transform: translateX(50%);
+    }
+
+    &.add-links__add-more_teacher-registration-2 {
+        width: fit-content;
+        position: absolute;
+        bottom: -25px;
+        left: 198px;
+
+        @include breakpoint($mobile-bp) {
+            left: 0;
+            right: auto;
+            transform: none;
+        }
+    }
+    
+    &.add-links__add-more_teacher-registration {
+        margin: 25px 0 0 30px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        border-bottom: 1px solid #4b465a;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        transform: none;
+
+        @include breakpoint($mobile-bp) {
+            margin: 25px auto 0;
+        }
+
+        &:hover {
+            border-color: $purple;
+        }
+    }
+}
+
+.add-links__add-more__img {
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -19px;
+}
+
+.period-execution {
+   margin: 35px 0 20px;
+
+    @include breakpoint($mobile-bp) {
+        margin: 45px 0 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 70px 0 20px;
+        position: relative;
+    }
+
+    &.period-execution_teacher-registration {
+        margin: 13px 0 20px;
+    }
+}
+
+.period-execution__title {
+    margin-bottom: 2px;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 5px;
+    }
+}
+
+.period-execution__main {
+    display: flex;
+    align-items: center;
+    select {
+        display: none;
+    }
+
+    &.period-execution__main_add,
+    &.period-execution__main_select-days {
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    &.period-execution__main_add {
+        &::after {
+            content: 'Например до 02.02.2021 18:00';
+            font-family: "Nunito", sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            color: #afacb6;
+            letter-spacing: -.2px;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+    }
+
+    &.period-execution__main_select-days {
+        &::after {
+            content: 'Например до 02.02.2021';
+            font-family: "Nunito", sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            color: #afacb6;
+            letter-spacing: -.2px;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+    }
+}
+
+.period-execution__status {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 12px;
+    color: #afacb6;
+    letter-spacing: -.2px; 
+
+    @include breakpoint($mobile-sm-bp) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &.passed {
+        color: #349138;
+    }
+
+    &.notpassed {
+        color: #d25078;
+    }
+}
+
+.modal-homework__footer {
+    display: flex;
+}
+
+.modal-replenish__footer {
+    margin: 35px auto 0;
+    max-width: 450px;
+    width: 100%;
+}
+
+.modal-homework__footer-btn {
+    width: 100%;
+    height: 65px;
+    border: none;
+    border-radius: 8px;
+    background-color: #36a9e0;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 65px;
+    color: $white;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    @include breakpoint($mobile-bp) {
+        height: 55px;
+        line-height: 55px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    &:hover {
+       background-color: #188ac1;
+       color: #e7dfdf;
+    }
+}
+
+.modal-homework__footer-btn_close {
+    margin-right: 7px;
+    width: 43%;
+    background-color: transparent;
+    color: #ccccce;
+    border: 1px solid #ccccce;
+
+    &:hover {
+        background-color: #ccccce;
+        color: $white;
+    }
+
+    &.mr-13 {
+        margin-right: 13px;
+    }
+}
+
+.modal-homework__footer-btn_confirm {
+    width: 57%;
+}
+
+.line-block-buttons {
+    max-width: 430px;
+    width: 100%;
+    position: absolute;
+    top: 168px;
+    right: 110px;
+
+    @include breakpoint($notebook-bp) {
+        top: 115px;
+        right: 85px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        top: 100px;
+        right: 40px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        display: flex;
+        flex-direction: column;
+        max-width: 225px;
+        top: 67px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.tab-btn-1,
+.tab-btn-2,
+.modal-select-days__time-right__item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &.active .fix-label,
+    &.active .package-label {
+        font-weight: 700;
+    }
+
+    &.active .fix-label::before,
+    &.active .package-label::before {
+        border: 5px solid #845695;
+        box-shadow: none;
+
+        @include breakpoint($mobile-bp) {
+            border: 4px solid #845695;
+        }
+    }
+}
+
+.tab-btn-1 {
+    margin-right: 22px;
+}
+
+.tab-btn-2 {
+    @include breakpoint($mobile-sm-bp) {
+        margin: 10px 0 0 -90px;
+    }
+}
+
+.fix-input,
+.package-input {
+    position: relative;
+    display: none;
+}
+
+.fix-label,
+.package-label {
+    margin-left: 30px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: left;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 18px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    position: relative;
+    cursor: pointer;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 16px;
+    }
+
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: #FCFCFC;
+        box-shadow: 0 0 0 2px #EBEBEB;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        box-sizing: border-box;
+
+        @include breakpoint($mobile-bp) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.package-label {
+
+    &::after {
+        content: 'выгодно';
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 13px;
+        color: #d55c81;
+        letter-spacing: -.2px;
+        position: absolute;
+        top: -3px;
+        right: -60px;
+    }
+}
+
+.line-tab {
+    margin-top: 50px;
+    display: none;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-top: 90px;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.fix-block {
+    margin-bottom: 22px;
+}
+
+.package-block {
+    margin-bottom: 27px;
+    width: 98%;
+}
+
+.fix-block__title,
+.package-block__title {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 25px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+.modal-add-lesson__header {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-add-lesson__header-title {
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 25px;
+    color: $light-black;
+}
+
+.modal-add-lesson__header-subtitle {
+    margin: 0 10px;
+    font-family: $font-secondary;
+    font-size: 13px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    text-align: center;
+}
+
+.modal-add-lesson__kid {
+    margin-bottom: 20px;
+
+    &.modal-add-lesson__kid_lessons {
+        margin: 6px 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint($mobile-bp) {
+            margin-right: 80px;
+            min-width: 320px;
+        }
+    }
+}
+
+.modal-add-lesson__kid-block {
+    display: flex;
+}
+
+.modal-add-lesson__main-ttile {
+    margin-bottom: 5px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $light-black;
+    letter-spacing: -.1px;
+
+    &.modal-add-lesson__main-ttile_lessons {
+        margin: 0 10px 0 0;
+    }
+}
+
+.modal-add-lesson__kid-buttons {
+    display: flex;
+}
+
+.modal-add-lesson__kid-btn {
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+
+    &.active {
+        .modal-add-lesson__kid-name {
+            font-weight: 700;
+            border: none;
+        }
+
+        .modal-add-lesson__kid-btn__label::before {
+            border: 1px solid #41b5ed;
+        }
+    }
+}
+
+.modal-add-lesson__time-btn {
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+
+    &.active {
+        .modal-add-lesson__time-name {
+            color: #974091;
+        }
+
+        .modal-add-lesson__time-name.fw-600 {
+            font-weight: 700;
+        }
+        
+        .modal-add-lesson__time-btn__label::before {
+            border: 6px solid #974091;
+            box-shadow: none; 
+        }
+
+        .modal-add-lesson__time-btn__label_teachers::before {
+            border: 4px solid #974091; 
+        }
+    }
+}
+
+.modal-add-lesson__kid-btn__input,
+.modal-add-lesson__time-btn__input {
+    display: none;
+}
+
+.modal-add-lesson__kid-btn__label {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+        content: "";
+        margin: -2.5px -2.5px;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        box-sizing: border-box;
+    }
+}
+
+.modal-add-lesson__time-btn__label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background: #FCFCFC;
+        box-shadow: 0 0 0 2px #ebebeb;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        box-sizing: border-box;
+    }
+
+    &.modal-add-lesson__time-btn__label_teachers {
+        padding: 5px 0;
+
+        &::before {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: auto;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        @include breakpoint($mobile-bp) {
+            display: flex;
+        }
+    }
+
+    &.bb-1 {
+        border-bottom: 1px solid #eeedf5;
+    }
+}
+
+.modal-add-lesson__kid-avatar {
+    width: 21px;
+    height: 21px;
+}
+
+.modal-add-lesson__kid-avatar-img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-add-lesson__kid-name {
+    margin-left: 8px;
+    height: 19px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    color: $light-black;
+    border-bottom: 1px dotted $light-black;
+}
+
+.modal-add-lesson__time {
+    margin-bottom: 25px;
+}
+
+.modal-add-lesson__time-name {
+    margin: 2px 0 0 36px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 17px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    &.modal-add-lesson__time-name_teachers {
+        margin: 0 0 0 10px;
+    }
+    
+    &.m-0 {
+        margin: 0;
+    }
+}
+
+.modal-add-lesson__footer-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #954091;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: #733570;
+    }
+}
+
+.modal-add-lesson__footer-subtitle {
+    margin: 10px 5px 5px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 12px;
+    color: $grey;
+    letter-spacing: -.2px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.modal-teachers__title {
+    margin-bottom: 25px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 21px;
+    color: $light-black;
+    letter-spacing: -.2px;
+}
+
+.modal-teachers__btn {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #943f90;
+    border-radius: 8px;
+    background-color: #943f90;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;
+    letter-spacing: -.2px;
+    transition: all .2s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $white;
+        color: #943f90;
+    }
+}

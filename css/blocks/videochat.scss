@@ -1,0 +1,101 @@
+.videochat__block,
+.videochat-no-connection__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.videochat__block {
+    background-color: #606060;
+}
+
+.videochat__content {
+    width: fit-content;
+    height: 100%;
+}
+
+.videochat-no-connection__block {
+    padding: 0 20px;
+    background: url(../../images/study-room/no-connection-bg.jpg) center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    box-sizing: border-box;
+
+    @include breakpoint($mobile-sm-bp) {
+        padding-top: 20px;
+        justify-content: flex-start;
+    }
+}
+
+.videochat-no-connection__block-icon {
+    margin-bottom: 20px;
+    width: 45px;
+    height: 45px;
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+    }
+}
+
+.videochat-no-connection__block-title {
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 30px;
+    color: $white;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {   
+        font-size: 25px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 15px;
+        font-size: 20px;
+    } 
+}
+
+.videochat-no-connection__block-text {
+    margin-bottom: 30px;
+    max-width: 540px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 16px;
+    color: #888b8d;
+    letter-spacing: -.1px;
+
+    @include breakpoint($mobile-bp) {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 25px;
+        font-size: 13px;
+    } 
+}
+
+.videochat-no-connection__block-btn {
+    width: 112px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 15px;
+    color: $blue;
+    letter-spacing: -.2px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}

@@ -1,0 +1,467 @@
+.teacher-info-item {
+    margin: 25px 0 60px;
+
+    @include breakpoint($tablet-bp) {
+        margin: 25px auto 50px;
+        padding-top: 10px;
+        width: 100%;
+        max-width: 695px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 25px auto 40px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin: 25px auto 30px;
+    }
+
+    &.teacher-info-item_teacher-registration {
+        @include breakpoint($tablet-bp) {
+            margin: 25px auto 20px;
+        }
+    }
+}
+
+.teacher-info-item__header {
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoint($tablet-bp) {
+        flex-direction: column;
+    }
+}
+
+.teacher-info-item__left {
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e5e9ee;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 10px;
+    }
+
+    &.teacher-info-item__left_teacher-registration {
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 25px;
+            padding-bottom: 0;
+            flex-direction: column;
+            border-bottom: none;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.teacher-info-item__right {
+    margin-left: 60px;
+    width: 100%;
+
+    @include breakpoint($tablet-bp) {
+        margin-left: 0;
+    }
+}
+
+.teacher-info-item__right-block {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e9ee;
+
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-left: 0;
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    &.fd-column {
+        margin-bottom: 25px;
+        padding-bottom: 0;
+        flex-direction: column;
+        border-bottom: none;
+
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &.teacher-info-item__right-block_1 {
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e5e9ee;
+    }
+
+    &.teacher-info-item__right-block_teacher-registration {
+        padding-bottom: 0;
+        border-bottom: none;
+
+        @include breakpoint($desktop-big-bp) {
+            max-width: 560px;
+        }
+    }
+
+    &.pc {
+        @include breakpoint($tablet-bp) {
+            padding-bottom: 0;
+            display: none;
+        }
+    }
+
+    &.mobile {
+        display: none;
+
+        @include breakpoint($tablet-bp) {
+            margin-left: 25px;
+            display: flex;
+        }
+
+        @include breakpoint($mobile-bp) {
+            margin-left: 25px;
+        }
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-left: 15px;
+        }
+    }
+}
+
+.teacher-info-item__right-group {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($tablet-bp) {
+        flex-direction: column-reverse;
+    }
+}
+
+.teacher-info-item__right-together {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+
+    @include breakpoint($mobile-sm-bp) {
+        align-items: center;
+        height: 15px;
+    }
+}
+
+.teacher-info-item__right-block__btns {
+    margin-top: 10px;
+    display: flex;
+}
+
+.teacher-info-item__footer {
+    padding-top: 15px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 15px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    border-top: 1px solid #e5e9ee;
+
+    @include breakpoint($tablet-bp) {
+        font-size: 14px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.pc {
+        @include breakpoint($mobile-sm-bp) {
+            display: none;
+        }
+    }
+
+    &.mobile {
+        display: none;
+
+        @include breakpoint($mobile-sm-bp) {
+            margin-right: 20px;
+            display: flex;
+        }
+    }
+
+    &.active {
+        .teacher-info-item__footer-span {
+            display: inline;
+        }
+    }
+}
+
+.teacher-info-item__footer-span {
+    display: none;
+}
+
+.teacher-info-item__footer-btn {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 13px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #a2a1ac;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+        border-bottom: 1px solid transparent; 
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin-top: 5px;
+        width: fit-content;
+    }
+}
+
+.teacher-record {
+    @include breakpoint($tablet-bp) {
+        margin: 0 auto;
+        max-width: 695px;
+        width: 100%;
+    }
+}
+
+.teacher-record__title {
+    margin-bottom: 15px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 30px;
+    color: $light-black;
+    letter-spacing: -.2px;
+
+    @include breakpoint($tablet-bp) {
+        font-size: 27px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        font-size: 24px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 20px;
+    }
+}
+
+.teacher-record__item {
+    padding: 15px 0 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    border: 2px solid #e7ebee;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @include breakpoint($tablet-bp) {
+        padding: 15px 0 0;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.teacher-record__item-left {
+    margin-left: 85px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 22px;
+    color: $light-black;
+    letter-spacing: -.2px;
+    position: relative;
+
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 15px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-left: 60px;
+        font-size: 17px;
+    }
+
+    span {
+        margin-left: 5px;
+        font-weight: 800;
+        color: #28aae1;
+        border-bottom: 1px solid #dbecf5;
+
+        @include breakpoint($mobile-sm-bp) {
+            font-size: 16px;
+        }
+    }
+
+}
+
+.teacher-record__item-left-img {
+    width: 58px;
+    height: 66px;
+    position: absolute;
+    top: -30px;
+    left: -83px;
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 50px;
+        height: 55px;
+        top: -28px;
+        left: -65px;
+    }
+}
+
+.teacher-record__item-right {
+    padding: 0 40px 0 50px;
+    display: flex;
+    align-items: center;
+    height: 61px;
+    background-color: #f9fbfd;
+    border-left: 2px solid #e7ebee;
+    border-radius: 0 10px 10px 0;
+
+    @include breakpoint($tablet-bp) {
+        padding: 0 50px;
+        justify-content: center;
+        width: 100%;
+        border-top: 2px solid #e7ebee;
+        border-left: none;
+        box-sizing: border-box;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        padding: 0 30px;
+    }
+}
+
+.teacher-record__item-text {
+    margin-right: 25px;
+    width: 200px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 13px;
+    color: $grey;
+    line-height: 1.15;
+    letter-spacing: -.2px;
+    text-align: end;
+
+    @include breakpoint($mobile-sm-bp) {
+        width: 115px;
+        font-size: 12px;
+    }
+}
+
+.teacher-info__about {
+    @include breakpoint($tablet-bp) {
+        margin: 0 auto;
+        max-width: 695px;
+        width: 100%;
+    }
+
+    &.teacher-info__about_teacher-registration {
+        margin-bottom: 20px;
+
+        @include breakpoint($desktop-big-bp) {
+            max-width: 800px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            max-width: 695px;
+        }
+    }
+}
+
+.teacher-info__about-header {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e9ee;
+}
+
+.teacher-info__about-text {
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 14px;
+    color: #4b465a;
+    line-height: 1.46;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-sm-bp) {
+        font-size: 13px;
+    }
+}
+
+.teacher-info__education {
+    @include breakpoint($tablet-bp) {
+        margin: 0 auto;
+        max-width: 695px;
+        width: 100%;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin: 0 auto 15px;
+    }
+}
+
+.teacher-info__education-items {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teacher-info__education-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        margin-bottom: 5px;
+    }
+}
+
+.teacher-info__education-item-icon {
+    width: 72px;
+    height: 72px;
+    position: relative;
+}
+
+.teacher-info__education-item-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teacher-info__education-item-info {
+    margin-left: 20px;
+}
+
+.teacher-info__education-item-title {
+    margin-top: 3px;
+    width: 435px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    color: $light-black;
+    line-height: 1.11;
+    letter-spacing: -.2px;
+
+    @include breakpoint($mobile-bp) {
+        max-width: 435px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    @include breakpoint($mobile-sm-bp) {
+        max-width: 270px;
+        font-size: 14px;
+    }
+}
