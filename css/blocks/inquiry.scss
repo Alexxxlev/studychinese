@@ -172,7 +172,7 @@
     border: none;
     border-radius: 50%;
     box-shadow: 4px 4px 16px 0 rgba(5, 22, 26, 0.14);
-    background: transparent url(../../images/plus-blue.svg) center no-repeat;
+    background: transparent url(../images/plus-blue.svg) center no-repeat;
     background-size: 15px;
     -webkit-background-size: 15px;
     cursor: pointer;
@@ -180,7 +180,7 @@
 
     &:hover,
     &:focus {
-        background: #33ade7 url(../../images/plus-white.svg) center no-repeat;
+        background: #33ade7 url(../images/plus-white.svg) center no-repeat;
         background-size: 15px;
         -webkit-background-size: 15px;
     }
@@ -528,7 +528,7 @@
     box-sizing: border-box;
     border: 1px solid #349138;
     border-radius: 15px;
-    background: $white url(../../images/btn-open.svg) 10px 5px no-repeat;
+    background: $white url(../images/btn-open.svg) 10px 5px no-repeat;
     background-size: auto;
     -webkit-background-size: auto;
     font-family: $font-secondary;
@@ -554,7 +554,7 @@
     box-sizing: border-box;
     border: 1px solid $red;
     border-radius: 15px;
-    background: $white url(../../images/btn-close-red.svg) 10px 5px no-repeat;
+    background: $white url(../images/btn-close-red.svg) 10px 5px no-repeat;
     background-size: auto;
     -webkit-background-size: auto;
     font-family: $font-secondary;
@@ -606,7 +606,7 @@
     border: 1px solid #cce0e9;
     border-radius: 20px;
     background-color: transparent;
-    background-image: url(../../images/plus-blue.svg);
+    background-image: url(../images/plus-blue.svg);
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -616,7 +616,7 @@
     &:focus {
         border: 1px solid #33ade7;
         background-color: #33ade7;
-        background-image: url(../../images/plus-white.svg);
+        background-image: url(../images/plus-white.svg);
     }
 }
 
@@ -643,7 +643,7 @@
     height: 17px;
     border: none;
     border-radius: 50%;
-    background: #33ade7 url(../../images/arrow-up.svg) center no-repeat;
+    background: #33ade7 url(../images/arrow-up.svg) center no-repeat;
     background-size: contain;
     position: absolute;
     left: 50%;

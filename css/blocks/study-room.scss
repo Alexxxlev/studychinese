@@ -41,7 +41,7 @@
         content: '';
         width: 11px;
         height: 11px;
-        background: url(../../images/arrow-right_blue.svg) center no-repeat;
+        background: url(../images/arrow-right_blue.svg) center no-repeat;
         background-size: contain;
         -webkit-background-size: contain;
         position: absolute;
@@ -470,8 +470,8 @@
         width: 17px;
         height: 17px;
         background-color: $white;
-        mask: url(../../images/study-room/video-chat.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/video-chat.svg) center no-repeat;
+        mask: url(../images/study-room/video-chat.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/video-chat.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -573,7 +573,7 @@
             display: block;
             width: 15px;
             height: 15px;
-            background: url(../../images/study-room/done.svg) center no-repeat;
+            background: url(../images/study-room/done.svg) center no-repeat;
             background-size: contain;
             -webkit-background-size: contain;
             position: relative;
@@ -592,8 +592,8 @@
             width: 15px;
             height: 15px;
             background-color: #92949b;
-            mask: url(../../images/study-room/board-close.svg) center no-repeat;
-            -webkit-mask: url(../../images/study-room/board-close.svg) center no-repeat;
+            mask: url(../images/study-room/board-close.svg) center no-repeat;
+            -webkit-mask: url(../images/study-room/board-close.svg) center no-repeat;
             mask-size: contain;
             -webkit-mask-size: contain;
             position: relative;
@@ -641,7 +641,7 @@
         display: block;
         width: 12px;
         height: 15px;
-        background: url(../../images/study-room/board-red.svg) center no-repeat;
+        background: url(../images/study-room/board-red.svg) center no-repeat;
         background-size: contain;
         -webkit-background-size: contain;
         position: relative;
@@ -660,7 +660,7 @@
             display: block;
             width: 12px;
             height: 15px;
-            background: url(../../images/study-room/board-green.svg) center no-repeat;
+            background: url(../images/study-room/board-green.svg) center no-repeat;
             background-size: contain;
             -webkit-background-size: contain;
             position: relative;
@@ -714,8 +714,8 @@
         width: 15px;
         height: 15px;
         background-color: #92949b;
-        mask: url(../../images/study-room/plus.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/plus.svg) center no-repeat;
+        mask: url(../images/study-room/plus.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/plus.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -743,8 +743,8 @@
         width: 20px;
         height: 20px;
         background-color: #92949b;
-        mask: url(../../images/study-room/children.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/children.svg) center no-repeat;
+        mask: url(../images/study-room/children.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/children.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -796,8 +796,8 @@
         width: 17px;
         height: 17px;
         background-color: #a3a4ab;
-        mask: url(../../images/study-room/video.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/video.svg) center no-repeat;
+        mask: url(../images/study-room/video.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/video.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -857,8 +857,8 @@
         width: 20px;
         height: 20px;
         background-color: #a4a5ac;
-        mask: url(../../images/study-room/settings.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/settings.svg) center no-repeat;
+        mask: url(../images/study-room/settings.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/settings.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -912,8 +912,8 @@
         width: 20px;
         height: 20px;
         background-color: #a6a7ae;
-        mask: url(../../images/study-room/messages.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/messages.svg) center no-repeat;
+        mask: url(../images/study-room/messages.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/messages.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -1011,8 +1011,8 @@
         width: 20px;
         height: 20px;
         background-color: #a6a7ae;
-        mask: url(../../images/study-room/files.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/files.svg) center no-repeat;
+        mask: url(../images/study-room/files.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/files.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -1218,10 +1218,10 @@
     margin-right: 5px;
     width: 17px;
     height: 15px;
-    background: url(../../images/not-verified.png) no-repeat center;
+    background: url(../images/not-verified.png) no-repeat center;
 
     &.read {
-        background: url(../../images/verified.png) no-repeat center;
+        background: url(../images/verified.png) no-repeat center;
     }
 }
 
@@ -1459,8 +1459,8 @@
         width: 25px;
         height: 25px;
         background-color: #4b465a;
-        mask: url(../../images/study-room/microphone.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/microphone.svg) center no-repeat;
+        mask: url(../images/study-room/microphone.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/microphone.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -1499,8 +1499,8 @@
         width: 20px;
         height: 20px;
         background-color: #4b465a;
-        mask: url(../../images/study-room/video-chat.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/video-chat.svg) center no-repeat;
+        mask: url(../images/study-room/video-chat.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/video-chat.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -1604,8 +1604,8 @@
             width: 25px;
             height: 25px;
             background-color: $white;
-            mask: url(../../images/study-room/volume.svg) center no-repeat;
-            -webkit-mask: url(../../images/study-room/volume.svg) center no-repeat;
+            mask: url(../images/study-room/volume.svg) center no-repeat;
+            -webkit-mask: url(../images/study-room/volume.svg) center no-repeat;
             mask-size: contain;
             -webkit-mask-size: contain;
             position: relative;
@@ -1636,8 +1636,8 @@
         width: 23px;
         height: 23px;
         background-color: #4b465a;
-        mask: url(../../images/study-room/full-screen.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/full-screen.svg) center no-repeat;
+        mask: url(../images/study-room/full-screen.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/full-screen.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -1900,8 +1900,8 @@
         width: 22px;
         height: 22px;
         background-color: $black;
-        mask: url(../../images/study-room/tool-text.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/tool-text.svg) center no-repeat;
+        mask: url(../images/study-room/tool-text.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/tool-text.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         transition: 0.3s all ease-in-out;
@@ -1925,8 +1925,8 @@
         width: 21px;
         height: 21px;
         background-color: $black;
-        mask: url(../../images/study-room/tool-image.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/tool-image.svg) center no-repeat;
+        mask: url(../images/study-room/tool-image.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/tool-image.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         transition: 0.3s all ease-in-out;
@@ -1952,8 +1952,8 @@
         width: 21px;
         height: 21px;
         background-color: #1f1f28;
-        mask: url(../../images/study-room/ellipse.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/ellipse.svg) center no-repeat;
+        mask: url(../images/study-room/ellipse.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/ellipse.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         transition: 0.3s all ease-in-out;
@@ -2276,8 +2276,8 @@
         width: 17px;
         height: 17px;
         background-color: #1f1f28;
-        mask: url(../../images/study-room/tool-tags-bold.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/tool-tags-bold.svg) center no-repeat;
+        mask: url(../images/study-room/tool-tags-bold.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/tool-tags-bold.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -2310,8 +2310,8 @@
         width: 19px;
         height: 19px;
         background-color: #1f1f28;
-        mask: url(../../images/study-room/tool-tags-underline.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/tool-tags-underline.svg) center no-repeat;
+        mask: url(../images/study-room/tool-tags-underline.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/tool-tags-underline.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -2353,8 +2353,8 @@
         width: 22px;
         height: 22px;
         background-color: #1f1f28;
-        mask: url(../../images/study-room/pen.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/pen.svg) center no-repeat;
+        mask: url(../images/study-room/pen.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/pen.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -2387,8 +2387,8 @@
         width: 24px;
         height: 22px;
         background-color: #1f1f28;
-        mask: url(../../images/study-room/eraser.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/eraser.svg) center no-repeat;
+        mask: url(../images/study-room/eraser.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/eraser.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: relative;
@@ -2445,7 +2445,7 @@
         height: 30px;
         border: 1px solid #d9dee3;
         border-radius: 50%;
-        background: url(../../images/study-room/btn-hide.svg) center no-repeat;
+        background: url(../images/study-room/btn-hide.svg) center no-repeat;
         background-size: 10px 15px;
         -webkit-background-size: 10px 15px;
         position: absolute;

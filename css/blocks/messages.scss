@@ -36,7 +36,7 @@
     margin: 0 5px 0 22px;
     width: 15px;
     height: 15px;
-    background: url(../../images/magnifier.svg) no-repeat 0 0/contain;
+    background: url(../images/magnifier.svg) no-repeat 0 0/contain;
     border: none;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
@@ -46,7 +46,7 @@
     }
 
     &:hover {
-        background: url(../../images/magnifier-purple.svg) no-repeat 0 0/contain;
+        background: url(../images/magnifier-purple.svg) no-repeat 0 0/contain;
     }
 }
 
@@ -60,7 +60,7 @@
     margin: auto 0;
     width: 100%;
     height: 355px;
-    background: url(../../images/messages-empty-bg.png) center right no-repeat;
+    background: url(../images/messages-empty-bg.png) center right no-repeat;
 }
 
 .start-dialogue-block__wrapper {
@@ -185,7 +185,7 @@
         content: '';
         width: 13px;
         height: 13px;
-        background: url(../../images/magnifier.svg) no-repeat 0 0/contain;
+        background: url(../images/magnifier.svg) no-repeat 0 0/contain;
         position: absolute;
         top: 50%;
         right: 15px;
@@ -402,12 +402,12 @@
 
     &.read {
         display: block;
-        background: url(../../images/verified.png) no-repeat center;
+        background: url(../images/verified.png) no-repeat center;
     }
 
     &.not-read {
         display: block;
-        background: url(../../images/not-verified.png) no-repeat center;
+        background: url(../images/not-verified.png) no-repeat center;
     }
 }
 
@@ -729,8 +729,8 @@
     width: 25px;
     height: 25px;
     background-color: #9d9fac;
-    mask: url(../../images/btn-smile.svg) center no-repeat;
-    -webkit-mask: url(../../images/btn-smile.svg) center no-repeat;
+    mask: url(../images/btn-smile.svg) center no-repeat;
+    -webkit-mask: url(../images/btn-smile.svg) center no-repeat;
     mask-size: contain;
     -webkit-mask-size: contain;
     border: none;
@@ -761,7 +761,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background: url(../../images/btn-send.svg) center no-repeat;
+        background: url(../images/btn-send.svg) center no-repeat;
         background-size: contain;
         -webkit-background-size: contain;
         transform: rotate(45deg);

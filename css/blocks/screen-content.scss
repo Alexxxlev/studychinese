@@ -95,7 +95,7 @@
 
 .screen-content-children {
     background-color: #cf9fc9;
-    background-image: url(../../images/study-room/children-bg.png);
+    background-image: url(../images/study-room/children-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -111,7 +111,7 @@
 
     @include breakpoint($mobile-sm-bp) {
         min-height: 460px;
-        background-image: url(../../images/study-room/children-bg-mobile.png);
+        background-image: url(../images/study-room/children-bg-mobile.png);
         background-size: 125%;
         -webkit-background-size: 125%;
     } 
@@ -415,7 +415,7 @@
 	min-width: 325px;
     min-height: 325px;
 	
-	background: #f8f9f9 url(../../images/study-room/draw-hieroglyph-bg.svg) center no-repeat;
+	background: #f8f9f9 url(../images/study-room/draw-hieroglyph-bg.svg) center no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
 
@@ -567,8 +567,8 @@
         width: 20px;
         height: 20px;
         background-color: $white;
-        mask: url(../../images/study-room/microphone.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/microphone.svg) center no-repeat;
+        mask: url(../images/study-room/microphone.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/microphone.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: absolute;
@@ -608,8 +608,8 @@
         width: 18px;
         height: 18px;
         background-color: $white;
-        mask: url(../../images/study-room/video-chat.svg) center no-repeat;
-        -webkit-mask: url(../../images/study-room/video-chat.svg) center no-repeat;
+        mask: url(../images/study-room/video-chat.svg) center no-repeat;
+        -webkit-mask: url(../images/study-room/video-chat.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
         position: absolute;
@@ -777,8 +777,8 @@
         width: 10px;
         height: 10px;
         background-color: #b7c1ca;
-        mask: url(../../images/close-disabled.svg) center no-repeat;
-        -webkit-mask: url(../../images/close-disabled.svg) center no-repeat;
+        mask: url(../images/close-disabled.svg) center no-repeat;
+        -webkit-mask: url(../images/close-disabled.svg) center no-repeat;
         mask-size: contain;
         -webkit-mask-size: contain;
     }
@@ -914,7 +914,7 @@
         content: '';
         width: 22px;
         height: 22px;
-        background: url(../../images/study-room/text-veer.svg) center no-repeat;
+        background: url(../images/study-room/text-veer.svg) center no-repeat;
         position: absolute;
         right: -35px;
         bottom: -25px;

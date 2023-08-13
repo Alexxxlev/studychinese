@@ -171,7 +171,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(../../images/arrow-prev.svg);
+        background-image: url(../images/arrow-prev.svg);
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
@@ -186,7 +186,7 @@
     height: 9px;
 
     &::before {
-        background-image: url(../../images/study-room/triangle.svg);
+        background-image: url(../images/study-room/triangle.svg);
         transform: scale(1, 1);
     }
 }
